@@ -9,16 +9,8 @@ soup = BeautifulSoup(data.text, 'html.parser')
 #div = soup.find('div', {'class': 'sense'}).get_text()
 
 word = soup.find('div', {'class': 'word'}, {'id': term})
-for sense in word.find('div', {'class': 'sense'}):
-
+for sense in word.find_all('div', {'class': 'sense'}):
     sense_content = sense.find('div', {'class': 'sense-content'})
-    print(len(sense))
-        #the first "sense" div only has one element?
-        #yet the second "sense" has four?
-
-    #yet every sense is supposed to have:
-        #a sense content
-        #a definition
-        #a definition text
-    #so then what the hell?
+    definition = sense_content.find('span', {'class': 'definition'})
+    print(definition.get_text())
 
