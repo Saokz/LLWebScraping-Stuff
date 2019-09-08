@@ -1,8 +1,4 @@
 TODO
-
-  -give better names to the variables in the word finder scripts
-  
-  -finish diksiyonaryo.py
   
   -modify word finder scripts to just take command line arguments, or make a design decision regarding how they will be used with other projects,
    and modify them that way
