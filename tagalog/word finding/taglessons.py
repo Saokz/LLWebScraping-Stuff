@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-word = input("enter word to look up\n")
-url = "https://tagaloglessons.com/ajax/reference_guide_search_results2.php?keyword=" + word + "&num_results=10&no_search_login=false"
+term = input("enter word to look up\n")
+url = "https://tagaloglessons.com/ajax/reference_guide_search_results2.php?keyword=" + term + "&num_results=10&no_search_login=false"
 
 data = requests.get(url)
 soup = BeautifulSoup(data.text, 'html.parser')

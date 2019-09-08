@@ -6,7 +6,6 @@ url = "https://diksiyonaryo.ph/search/"+term
 
 data = requests.get(url)
 soup = BeautifulSoup(data.text, 'html.parser')
-#div = soup.find('div', {'class': 'sense'}).get_text()
 
 word = soup.find('div', {'class': 'word'}, {'id': term})
 for sense in word.find_all('div', {'class': 'sense'}):
