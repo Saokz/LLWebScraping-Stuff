@@ -1,5 +1,10 @@
 from bs4 import BeautifulSoup
 import sys
+'''
+File takes XML files for subtitles of netflix shows,
+and outputs the subtitle text from them into a new
+file.
+'''
 
 if len(sys.argv) < 3:
     print("Error. Args required: src_file.xml, dest_file.txt")
